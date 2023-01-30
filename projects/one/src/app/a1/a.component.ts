@@ -1,7 +1,9 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-a',
+  standalone: true,
   templateUrl: './a.component.html',
   styles: [`
     virtual-scroller {
@@ -88,7 +90,8 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
       font-size: inherit;
       display: inherit;
     }
-  `]
+  `],
+  imports: [RouterOutlet, RouterLink]
 })
 export class AComponent implements OnInit {
 
@@ -114,7 +117,7 @@ export class AComponent implements OnInit {
       faker: 'random.number'
     }
   };
-  public users: any = {
+  public users = {
     firstName: {
       faker: 'name.firstName'
     },
@@ -128,8 +131,8 @@ export class AComponent implements OnInit {
       faker: 'date.past'
     },
     username: () => (
-      this.users.lastName.substring(0, 5) +
-      this.users.firstName.substring(0, 3) +
+      this.users.lastName.faker.substring(0, 5) +
+      this.users.firstName.faker.substring(0, 3) +
       Math.floor(Math.random() * 10)
     ),
     ok: () => this.users.username(),
