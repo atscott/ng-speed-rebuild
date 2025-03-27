@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-b13',
-  templateUrl: './b13.component.html',
-  styles: [`
+    selector: 'app-b13',
+    templateUrl: './b13.component.html',
+    styles: [`
     virtual-scroller {
       background: white;
       color:black;
@@ -88,7 +88,8 @@ import { Component, OnInit } from '@angular/core';
       font-size: inherit;
       display: inherit;
     }
-  `]
+  `],
+    standalone: false
 })
 export class B13Component implements OnInit {
   data = [

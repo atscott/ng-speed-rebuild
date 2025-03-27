@@ -1,9 +1,9 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 
 @Component({
-  selector: 'app-a42',
-  templateUrl: './a42.component.html',
-  styles: [`
+    selector: 'app-a42',
+    templateUrl: './a42.component.html',
+    styles: [`
     virtual-scroller {
       background: white;
       color:black;
@@ -88,7 +88,8 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
       font-size: inherit;
       display: inherit;
     }
-  `]
+  `],
+    standalone: false
 })
 export class A42Component implements OnInit {
   @ViewChild('mylocal', { static: true }) mylocal: ElementRef; data = [

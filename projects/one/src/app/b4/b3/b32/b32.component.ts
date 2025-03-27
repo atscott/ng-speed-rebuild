@@ -5,9 +5,9 @@ import {ActivatedRoute, Router} from '@angular/router';
 import { HttpBackend, HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-b32',
-  templateUrl: './b32.component.html',
-  styles: [`
+    selector: 'app-b32',
+    templateUrl: './b32.component.html',
+    styles: [`
     virtual-scroller {
       background: white;
       color:black;
@@ -92,7 +92,8 @@ import { HttpBackend, HttpClient } from '@angular/common/http';
       font-size: inherit;
       display: inherit;
     }
-  `]
+  `],
+    standalone: false
 })
 export class B32Component implements OnInit {
   @Input() a: number ;

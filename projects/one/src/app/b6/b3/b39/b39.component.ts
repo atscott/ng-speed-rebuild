@@ -3,9 +3,9 @@ import * as moment from 'moment';
 import BigNumber from 'bignumber.js';
 
 @Component({
-  selector: 'app-b39',
-  templateUrl: './b39.component.html',
-  styles: [`
+    selector: 'app-b39',
+    templateUrl: './b39.component.html',
+    styles: [`
     virtual-scroller {
       background: white;
       color:black;
@@ -90,7 +90,8 @@ import BigNumber from 'bignumber.js';
       font-size: inherit;
       display: inherit;
     }
-  `]
+  `],
+    standalone: false
 })
 export class B39Component implements OnInit {
   mydate = moment(new Date())

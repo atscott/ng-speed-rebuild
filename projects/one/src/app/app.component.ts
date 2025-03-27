@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  template: `
+    selector: 'app-root',
+    template: `
     <ul class="slds-list_horizontal slds-has-dividers_left slds-has-block-links">
       <li class="slds-item"><a routerLink="a1">a1</a></li>
       <li class="slds-item"><a routerLink="a2">a2</a></li>
@@ -25,7 +25,7 @@ import { Component } from '@angular/core';
     <hr>
     <router-outlet></router-outlet>
   `,
-  styles: [`
+    styles: [`
     virtual-scroller {
       background: white;
       color:black;
@@ -110,7 +110,8 @@ import { Component } from '@angular/core';
       font-size: inherit;
       display: inherit;
     }
-  `]
+  `],
+    standalone: false
 })
 export class AppComponent {
   title = 'one';

@@ -2,9 +2,9 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import * as moment from 'moment';
 import BigNumber from 'bignumber.js';
 @Component({
-  selector: 'app-b28',
-  templateUrl: './b28.component.html',
-  styles: [`
+    selector: 'app-b28',
+    templateUrl: './b28.component.html',
+    styles: [`
     virtual-scroller {
       background: white;
       color:black;
@@ -89,7 +89,8 @@ import BigNumber from 'bignumber.js';
       font-size: inherit;
       display: inherit;
     }
-  `]
+  `],
+    standalone: false
 })
 export class B28Component implements OnInit {
   mydate = moment(new Date())

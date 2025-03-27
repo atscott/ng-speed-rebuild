@@ -1,9 +1,9 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 
 @Component({
-  selector: 'app-a5',
-  templateUrl: './a5.component.html',
-  styles: [`
+    selector: 'app-a5',
+    templateUrl: './a5.component.html',
+    styles: [`
     virtual-scroller {
       background: white;
       color:black;
@@ -88,7 +88,8 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
       font-size: inherit;
       display: inherit;
     }
-  `]
+  `],
+    standalone: false
 })
 export class A5Component implements OnInit {
 

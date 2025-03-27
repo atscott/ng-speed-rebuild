@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {FileUploader} from 'ng2-file-upload';
 
 @Component({
-  selector: 'app-b46',
-  templateUrl: './b46.component.html',
-  styles: [`
+    selector: 'app-b46',
+    templateUrl: './b46.component.html',
+    styles: [`
     virtual-scroller {
       background: white;
       color:black;
@@ -89,7 +89,8 @@ import {FileUploader} from 'ng2-file-upload';
       font-size: inherit;
       display: inherit;
     }
-  `]
+  `],
+    standalone: false
 })
 export class B46Component implements OnInit {
   public uploader: FileUploader = new FileUploader({url: 'URL'});

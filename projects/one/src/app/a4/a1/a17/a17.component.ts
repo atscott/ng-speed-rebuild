@@ -1,9 +1,9 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 
 @Component({
-  selector: 'app-a17',
-  templateUrl: './a17.component.html',
-  styles: [`
+    selector: 'app-a17',
+    templateUrl: './a17.component.html',
+    styles: [`
     virtual-scroller {
       background: white;
       color:black;
@@ -88,7 +88,8 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
       font-size: inherit;
       display: inherit;
     }
-  `]
+  `],
+    standalone: false
 })
 export class A17Component implements OnInit {
   nodes = [

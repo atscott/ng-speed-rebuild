@@ -2,10 +2,9 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-a',
-  standalone: true,
-  templateUrl: './a.component.html',
-  styles: [`
+    selector: 'app-a',
+    templateUrl: './a.component.html',
+    styles: [`
     virtual-scroller {
       background: white;
       color:black;
@@ -91,7 +90,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
       display: inherit;
     }
   `],
-  imports: [RouterOutlet, RouterLink]
+    imports: [RouterOutlet, RouterLink]
 })
 export class AComponent implements OnInit {
 

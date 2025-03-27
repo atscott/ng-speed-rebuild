@@ -4,9 +4,9 @@ import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 
 @Component({
-  selector: 'app-a55',
-  templateUrl: './a55.component.html',
-  styles: [`
+    selector: 'app-a55',
+    templateUrl: './a55.component.html',
+    styles: [`
     virtual-scroller {
       background: white;
       color:black;
@@ -91,7 +91,8 @@ import {takeUntil} from 'rxjs/operators';
       font-size: inherit;
       display: inherit;
     }
-  `]
+  `],
+    standalone: false
 })
 export class A55Component implements OnInit, OnDestroy {
   form: FormGroup;
