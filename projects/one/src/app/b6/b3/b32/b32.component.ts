@@ -2,7 +2,7 @@ import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import * as moment from 'moment';
 import BigNumber from 'bignumber.js';
 import {ActivatedRoute, Router} from '@angular/router';
-import {HttpBackend, HttpClient} from '@angular/common/http';
+import { HttpBackend, HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-b32',
