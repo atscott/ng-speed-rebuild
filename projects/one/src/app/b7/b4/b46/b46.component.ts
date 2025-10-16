@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FileUploader} from 'ng2-file-upload';
+
 
 @Component({
     selector: 'app-b46',
@@ -93,7 +93,7 @@ import {FileUploader} from 'ng2-file-upload';
     standalone: false
 })
 export class B46Component implements OnInit {
-  public uploader: FileUploader = new FileUploader({url: 'URL'});
+  
   constructor() { }
 
   public az: any = {id: 1, personsNames: 'aaa'};
@@ -182,7 +182,7 @@ export class B46Component implements OnInit {
     // call fibonacci
     this.fibonacci(10);
     // edit class props
-    this.users.firstName += '!';
+    this.users.firstName.faker += '!';
     this.conditionalField.type = true;
     this.group.description += 'Heya';
   }

@@ -1,19 +1,19 @@
 import {NgModule} from '@angular/core';
-import {TreeModule} from 'angular-tree-component';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 import {ReactiveFormsModule} from '@angular/forms';
-import { VirtualScrollerModule } from 'ngx-virtual-scroller';
+import {CdkTreeModule} from '@angular/cdk/tree';
 
 @NgModule({
   declarations: [],
   imports: [
     ReactiveFormsModule,
-    TreeModule.forRoot(),
-    VirtualScrollerModule
+    CdkTreeModule,
+    ScrollingModule
   ],
   exports: [
     ReactiveFormsModule,
-    TreeModule,
-    VirtualScrollerModule
+    ScrollingModule,
+    CdkTreeModule
   ]
 })
 export class OneSharedModule { }

@@ -1,12 +1,5 @@
 {
   "extends": "../../tsconfig.json",
-  "angularCompilerOptions": {
-    "disableTypeScriptVersionCheck": true,
-    "fullTemplateTypeCheck": false,
-    "ivyTemplateTypeCheck": false,
-    "preserveWhitespaces": false,
-    "enableIvy": true
-  },
   "compilerOptions": {
     "outDir": "../../out-tsc/i10/app"
   },

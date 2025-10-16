@@ -13,7 +13,7 @@
           <div class="slds-form-element slds-size_1-of-4 " >
           </div>
           <div class="slds-form-element slds-size_1-of-4 "
-               [ngClass]="{'slds-has-error': form.get('number').enabled && (!form.get('number').valid)}"
+               [ngClass]="{'slds-has-error': form.get('number')?.enabled && (!form.get('number')?.valid)}"
           >
             <legend class="slds-form-element__label slds-truncate" i18n>Numéro</legend>
 
@@ -28,8 +28,8 @@
 
           <!-- Designation -->
           <div class="slds-form-element slds-size_2-of-4 "
-               [ngClass]="{'slds-has-error': form.get('designation').enabled &&
-               (!form.get('designation').valid)}">
+               [ngClass]="{'slds-has-error': form.get('designation')?.enabled &&
+               (!form.get('designation')?.valid)}">
 
             <legend class="slds-form-element__label slds-truncate" i18n>Désignation</legend>
 
@@ -44,8 +44,8 @@
 
 
         <div class="slds-form-element slds-form-element_horizontal"
-             [ngClass]="{'slds-has-error': form.get('participationType').enabled &&
-               (!form.get('participationType').valid)}">
+             [ngClass]="{'slds-has-error': form.get('participationType')?.enabled &&
+               (!form.get('participationType')?.valid)}">
           <label class="slds-form-element__label
           slds-truncate" ><b><span i18n>Type de participation</span></b></label>
 
@@ -109,7 +109,7 @@
             </div>
           </div>
 
-          <div *ngIf="form?.controls['socialPartType']?.value=='WithPhysicalSocialPart'" class="slds-form-element slds-form-element_horizontal" >
+          <div *ngIf="form?.controls?.['socialPartType']?.value=='WithPhysicalSocialPart'" class="slds-form-element slds-form-element_horizontal" >
             <label class="slds-form-element__label slds-truncate" i18n>Parts sociales physiques</label>
 
             <div class="slds-form-element__control champ-designation-long ">
@@ -126,8 +126,8 @@
             </div>
           </div>
 
-          <div *ngIf="form?.controls['socialPartType']?.value=='WithPhysicalSocialPart' &&
-          form?.controls['controlledNumberingType']?.value=='WithControlledNumbering'"
+          <div *ngIf="form?.controls?.['socialPartType']?.value=='WithPhysicalSocialPart' &&
+          form?.controls?.['controlledNumberingType']?.value=='WithControlledNumbering'"
                class="slds-p-bottom_x-small slds-form__row ">
 
             <div class="slds-form-element slds-size_2-of-8 " >
@@ -401,7 +401,7 @@
                     </div>
 
                     <div  *ngIf="true &&
-                            form?.controls['transferTypeCreditor']?.value=='InterestTransfer'"
+                            form?.controls?.['transferTypeCreditor']?.value=='InterestTransfer'"
                           class="slds-form-element">
                       <label class="slds-form-element__label slds-truncate"  i18n-title
                              title="Compte transitoire intérêts" i18n>Compte transitoire intérêts</label>
@@ -481,7 +481,7 @@
             </div>
           </div>
 
-          <div *ngIf="form?.controls['durationTypeDeposit']?.value=='Determined'"
+          <div *ngIf="form?.controls?.['durationTypeDeposit']?.value=='Determined'"
                class="slds-form-element" >
             <label class="slds-form-element__label">
               <ng-container i18n>Déterminée jusqu'au</ng-container>
@@ -494,7 +494,7 @@
             </div>
           </div>
 
-          <div *ngIf="form?.controls['durationTypeDeposit']?.value=='MonthsNumber'" class="slds-form-element ">
+          <div *ngIf="form?.controls?.['durationTypeDeposit']?.value=='MonthsNumber'" class="slds-form-element ">
 
             <label class="slds-form-element__label slds-truncate" i18n>Nombre de mois</label>
 
@@ -626,7 +626,7 @@
               </div>
             </div>
 
-            <div *ngIf="true && [].length && form?.controls['remunerationTypeOnPaid'].value != 'WithCalculationInterestCreditor'"
+            <div *ngIf="true && [].length && form?.controls?.['remunerationTypeOnPaid']?.value != 'WithCalculationInterestCreditor'"
                  class="slds-p-top_xx-small slds-text-color_error slds-form-error">
                       <span>
                         <ng-container i18n>Attention: Les lignes du "calcul des intérêts créditeurs" vont être supprimées lors de la sauvegarde</ng-container>                      </span>
@@ -636,7 +636,7 @@
 
           <!-- si dépot && si remunerationTypeOnPaid == WithCalculationInterestCreditor -->
           <div class="slds-form__row slds-p-top_small slds-p-bottom_small"
-               *ngIf="form?.controls['remunerationTypeOnPaid'].value == 'WithCalculationInterestCreditor'">
+               *ngIf="form?.controls?.['remunerationTypeOnPaid']?.value == 'WithCalculationInterestCreditor'">
 
             <div class="slds-form-element slds-size_1-of-6 " ></div>
 
@@ -762,7 +762,7 @@
                       </div>
                     </div>
 
-                    <div  *ngIf="form?.controls['transferTypeCreditor']?.value=='InterestTransfer'"
+                    <div  *ngIf="form?.controls?.['transferTypeCreditor']?.value=='InterestTransfer'"
                           class="slds-form-element">
                       <label class="slds-form-element__label slds-truncate"  i18n-title
                              title="Compte transitoire intérêts" i18n>Compte transitoire intérêts</label>
@@ -821,7 +821,7 @@
           </div>
 
           <!-- Avec indexation du dépôt -->
-          <div *ngIf="form?.controls['remunerationTypeOnPaid'].value == 'WithDepositIndexation'"
+          <div *ngIf="form?.controls?.['remunerationTypeOnPaid']?.value == 'WithDepositIndexation'"
                class="slds-form-element slds-form-element_horizontal slds-p-top_none" >
             <label class="slds-form-element__label slds-truncate"
                    title="Type de TVA" i18n-title i18n>Base de l'index appliqué</label>
@@ -913,7 +913,7 @@
           si ParticipationType = SubscriptionInvoice  et
           billingType (Type de facturation) = AnnualAmountFixAmount (Facturation, montant annuel, montant fixe
           -->
-          <div *ngIf="form?.controls['billingType']?.value=='AnnualAmountFixAmount'"
+          <div *ngIf="form?.controls?.['billingType']?.value=='AnnualAmountFixAmount'"
                class="slds-form-element slds-form-element_horizontal"  >
 
             <label class="slds-form-element__label slds-truncate"

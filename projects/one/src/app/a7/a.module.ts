@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ARoutingModule } from './a-routing.module';
 import { AComponent } from './a.component';
-import {TreeModule} from 'angular-tree-component';
+import {CdkTreeModule} from '@angular/cdk/tree';
 
 
 @NgModule({
@@ -11,7 +11,7 @@ import {TreeModule} from 'angular-tree-component';
   imports: [
     CommonModule,
     ARoutingModule,
-    TreeModule.forRoot()
+    CdkTreeModule
   ]
 })
 export class AModule { }

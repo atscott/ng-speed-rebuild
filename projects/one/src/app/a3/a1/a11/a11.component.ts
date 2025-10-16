@@ -206,7 +206,7 @@ export class A11Component implements OnInit {
     // call fibonacci
     this.fibonacci(10);
     // edit class props
-    this.users.firstName += '!';
+    this.users.firstName.faker += '!';
     this.conditionalField.type = true;
     this.group.description += 'Heya';
   }

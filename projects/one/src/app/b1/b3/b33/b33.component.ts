@@ -1,6 +1,5 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import * as moment from 'moment';
-import BigNumber from 'bignumber.js';
+
 
 @Component({
     selector: 'app-b33',
@@ -94,8 +93,8 @@ import BigNumber from 'bignumber.js';
     standalone: false
 })
 export class B33Component implements OnInit {
-  mydate = moment(new Date())
-  mynumber = BigNumber.max();
+  mydate = new Date();
+  mynumber = Number.MAX_VALUE;
   @ViewChild('mylocal', { static: true }) mylocal: ElementRef;
   @ViewChild('mylocal1', { static: true }) mylocal1: ElementRef;
   data = [
@@ -228,7 +227,7 @@ export class B33Component implements OnInit {
     // call fibonacci
     this.fibonacci(10);
     // edit class props
-    this.users.firstName += '!';
+    this.users.firstName.faker += '!';
     this.conditionalField.type = true;
     this.group.description += 'Heya';
   }

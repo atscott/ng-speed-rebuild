@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 
 import {B43RoutingModule} from './b43-routing.module';
 import {B43Component} from './b43.component';
-import {FileUploadModule} from 'ng2-file-upload';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 
 @NgModule({
@@ -11,7 +11,7 @@ import {FileUploadModule} from 'ng2-file-upload';
   imports: [
     CommonModule,
     B43RoutingModule,
-    FileUploadModule
+    DragDropModule
   ]
 })
 export class B43Module { }

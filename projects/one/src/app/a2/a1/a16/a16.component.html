@@ -1,2 +1,2 @@
 <p>a16 works!</p>
-<tree-root [nodes]="nodes" [options]="options"></tree-root>
+<cdk-tree> @for (node of nodes; track $index) { <cdk-tree-node>{{node}}</cdk-tree-node> } </cdk-tree>
